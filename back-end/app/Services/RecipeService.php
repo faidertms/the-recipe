@@ -31,7 +31,7 @@ class RecipeService
             $gifs = Giphy::getGifsBySearchQuery($recipe['title']);
             return array(
                 'title'         => $recipe['title'],
-                'ingredients'   => $recipe['ingredients'],
+                'ingredients'   => preg_split ('/(\s*,*\s*)*,+(\s*,*\s*)*/', $recipe['ingredients']), // explode string in array and trim elements
                 'link'          => $recipe['href'],
                 'gif'           => empty($gifs['data']) ? null : $gifs['data'][0]['images']['fixed_height']['url']
             );

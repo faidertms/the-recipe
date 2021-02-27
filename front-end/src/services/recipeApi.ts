@@ -2,7 +2,7 @@ import axios, { AxiosInstance, AxiosResponse } from 'axios';
 import { IRecipe } from 'src/types/recipe';
 
 export interface GetRecipesResponse {
-    recipes: IRecipe,
+    recipes: IRecipe[],
     keywords: string[],
     message: string,
     code: string,
@@ -10,8 +10,8 @@ export interface GetRecipesResponse {
 
 export interface GetRecipesRequest {
     ingredients: string,
-    page: number,
-    query: String
+    page?: number,
+    query?: String
 }
 
 export const recipeApi: AxiosInstance = axios.create({

@@ -12,7 +12,7 @@ interface IRecipeContext {
 };
 
 interface ProviderProps {
-    children: JSX.Element
+    children: React.ReactNode
 };
 
 export const RecipeContext = createContext<IRecipeContext>({} as IRecipeContext);

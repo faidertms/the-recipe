@@ -5,8 +5,30 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.center-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
 :root {
   --header-color: rgba(255, 255, 255, 1);
   --border-color: #dcdcdc;
   --border-input-color: rgba(155, 154, 154, 0.47);
+  --button-background-color: rgba(155, 154, 154, 0.47);
+  --outline-color: #60A5FA;
+  --loader-background-color: rgba(155, 154, 154, 0.47);
 }

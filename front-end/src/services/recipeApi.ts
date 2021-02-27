@@ -15,7 +15,7 @@ export interface GetRecipesRequest {
 }
 
 export const recipeApi: AxiosInstance = axios.create({
-    baseURL: process.env.BASE_URL ?? "127.0.0.1:8000",
+    baseURL: process.env.BASE_URL ?? "http://127.0.0.1:8000",
     timeout: 240000,
     headers:
     {

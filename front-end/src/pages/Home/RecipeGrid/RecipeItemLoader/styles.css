@@ -1,0 +1,8 @@
+.recipe-bg-loader {
+    background-color: var(--loader-background-color);
+}
+
+.recipe-details-loader div {
+    height: 1rem;
+    margin-bottom: .8rem;
+}

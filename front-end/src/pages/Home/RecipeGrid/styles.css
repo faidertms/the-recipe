@@ -1,0 +1,8 @@
+.recipe-grid {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2rem;
+    overflow: hidden;
+    overflow-y: auto;
+}

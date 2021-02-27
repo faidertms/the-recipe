@@ -24,16 +24,17 @@ class RecipeController extends Controller
                 'p'   => $request->p,
                 'q'   => $request->q
             ], [
-                'i'   => 'string',
+                'i'   => 'nullable|string',
                 'p'   => 'nullable|integer|min:1',
                 'q'   => 'nullable|string'
             ])->validate();
 
             $ingredients = $request->i ? explode(',', $request->i) : [];
+            sort($ingredients, SORT_STRING);
 
             $responseBody = [
                 'recipes'   => $this->recipeService->getRecipesWithImageByIngredients($ingredients, $request->p, $request->q),
-                'keywords'  => sort($ingredients, SORT_STRING)
+                'keywords'  => $ingredients
             ];
 
             return $this->sendResponse("successful", $responseBody, 200);

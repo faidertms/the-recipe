@@ -25,7 +25,7 @@ class RecipeTest extends TestCase
             ]);
 
         //Ingredients validation
-        $this->json('GET', '/recipes', ['Accept' => 'application/json'])
+        $this->json('GET', '/recipes?i[]=butter&i[]=butter', ['Accept' => 'application/json'])
             ->assertStatus(422)
             ->assertJsonStructure([
                 'message',

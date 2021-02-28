@@ -56,7 +56,7 @@ A parte do front-end ja está compilada e adicionada no laravel para que ele pos
 
 ### Parando os containers
 
-Caso deseje parar os containers, que por padrão já deleta o container assim que são deletados devido a option --rm, basta usar os seguintes comandos:  
+Caso deseje parar os containers, que por padrão já deleta o container assim que são parados devido a option --rm, basta usar os seguintes comandos:  
 
 ```
 docker stop nginx

@@ -1,0 +1,48 @@
+version: "3.5"
+
+services:
+  #PHP 8 FPM LARAVEL
+  app:
+    build:
+      context: .
+      target: backend-development
+    restart: unless-stopped
+    working_dir: /var/www
+    env_file:
+      - .env
+    #bind volume
+    volumes:
+      - ./back-end/storage:/var/www/storage:rw
+    networks:
+      - netapp
+  #NGINX
+  nginx:
+    build:
+      context: .
+      target: backend-nginx
+    restart: unless-stopped
+    working_dir: /var/www
+    ports:
+      - 8000:80
+    expose:
+      - 8000
+    #bind volume
+    networks:
+      - netapp
+  #FRONTEND
+  front-end:
+    build:
+      context: .
+      target: frontend
+    restart: unless-stopped
+    working_dir: /app
+    ports:
+      - 8082:3000
+    expose:
+      - 8082
+    #bind volume
+    networks:
+      - netapp
+networks:
+  netapp:
+    driver: bridge

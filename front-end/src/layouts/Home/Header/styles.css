@@ -49,7 +49,10 @@
 }
 
 .search>input:focus {
-    outline: 1px solid var(--outline-color);
+    outline: none;
+    border: 1px solid var(--outline-color);
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
 }
 
 .search>button {
@@ -60,8 +63,11 @@
     background-color: var(--button-background-color);
 }
 
-.search>button:focus {
-    outline: 1px solid var(--outline-color);
+.search>button:focus, .search>button:hover {
+    outline: none;
+    border: 1px solid var(--outline-color);
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
 }
 
 @media (max-width: 640px) {

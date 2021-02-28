@@ -1,0 +1,30 @@
+.recipe-pagination {
+    background-color: white;
+    margin-bottom: 1rem;
+}
+
+.recipe-pagination-button-group {
+    width: 200px;
+    display: flex;
+}
+
+.recipe-pagination-button-group button {
+    flex: 1;
+    cursor: pointer;
+    border-radius: .25rem;
+    border: 2px solid var(--border-color);
+    background-color: white;
+}
+
+.recipe-pagination-button-group button:nth-child(1) {
+    margin-right: .5rem;
+}
+
+.recipe-pagination-button-group button:focus:not(:disabled), .recipe-pagination-button-group button:hover:not(:disabled) {
+    outline: 0;
+    border-color: var(--outline-color);
+}
+
+.recipe-pagination-button-group button:disabled {
+    cursor: not-allowed;
+}

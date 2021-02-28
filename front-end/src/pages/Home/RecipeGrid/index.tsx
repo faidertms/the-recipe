@@ -2,9 +2,10 @@
 import './styles.css';
 import RecipeItem from './RecipeItem';
 import { RecipeContext } from '../../../contexts/Recipe';
-import { useContext } from 'react';
+import { Fragment, useContext } from 'react';
 import RecipeItemLoader from './RecipeItemLoader';
 import EmptyGrid from './EmptyGrid';
+import Pagination from '../Pagination';
 
 export default function RecipeGrid(): JSX.Element {
 
@@ -15,10 +16,13 @@ export default function RecipeGrid(): JSX.Element {
     return isEmpty ? (
         <EmptyGrid />
     ) : (
-        <div className="recipe-grid">
-            {recipesItems.map((recipe, index) => (
-                loading ? <RecipeItemLoader key={index} /> : <RecipeItem {...recipe} key={recipe.title} />
-            ))}
-        </div>
-    );
+            <Fragment>
+                <div className="recipe-grid">
+                    {recipesItems.map((recipe, index) => (
+                        loading ? <RecipeItemLoader key={index} /> : <RecipeItem {...recipe} key={recipe.title} />
+                    ))}
+                </div>
+                <Pagination />
+            </Fragment>
+        );
 } 

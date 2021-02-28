@@ -5,7 +5,7 @@ import { FiSearch } from 'react-icons/fi';
 import './styles.css';
 
 export default function Header(): JSX.Element {
-    const { setIngredients } = useContext(RecipeContext);
+    const { searchForRecipes } = useContext(RecipeContext);
     const [search, setSearch] = useState('');
 
     const checkIfIngredientsIsValid = (ingredients: string) => {
@@ -16,7 +16,7 @@ export default function Header(): JSX.Element {
     const submitIngredients = () => {
         const trimSearch = search.trim();
         setSearch(trimSearch);
-        setIngredients(trimSearch);
+        searchForRecipes(trimSearch);
     }
 
     const onKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {

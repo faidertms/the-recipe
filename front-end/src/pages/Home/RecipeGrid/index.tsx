@@ -19,7 +19,7 @@ export default function RecipeGrid(): JSX.Element {
             <Fragment>
                 <div className="recipe-grid">
                     {recipesItems.map((recipe, index) => (
-                        loading ? <RecipeItemLoader key={index} /> : <RecipeItem {...recipe} key={recipe.title} />
+                        loading ? <RecipeItemLoader key={index} /> : <RecipeItem {...recipe} key={`${recipe.title}-${index}`} />
                     ))}
                 </div>
                 <Pagination />

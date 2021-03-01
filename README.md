@@ -84,3 +84,15 @@ docker stop app-dev
 ```
 
 O teste deverá ser executado normalmente, mostrando o resultado do teste no terminal, ao final do processo é finalizado o container.
+
+## Como iniciar o projeto para desenvolvimento(docker-compose)
+
+Para desenvolvimento recomendo utilizar o docker-compose, no qual já está configurado os volumes para o front-end e o back-end. Qualquer alteração nos arquivos do projeto(na maquina host) será refletido automaticamente no container. Essas configurações estão no arquivo docker-compose.yaml.  
+
+```
+docker-compose up
+```
+Para acessar as aplicações separadamente:  
+Front-end: [http://localhost:8082](http://localhost:8082)  
+Back-end: [http://localhost:8000](http://localhost:8000)
+

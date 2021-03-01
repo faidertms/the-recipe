@@ -13,6 +13,7 @@ services:
     #bind volume
     volumes:
       - ./back-end/storage:/var/www/storage:rw
+      - /var/www/vendor
     networks:
       - netapp
   #NGINX
@@ -40,6 +41,13 @@ services:
       - 8082:3000
     expose:
       - 8082
+    volumes:
+      - ./front-end:/app:rw
+      - /app/node_modules
+    command: > 
+            sh -c "
+            chown -R node:node /app/node_modules 
+            && npm start"
     #bind volume
     networks:
       - netapp

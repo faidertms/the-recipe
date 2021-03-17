@@ -1,6 +1,7 @@
-# The Recipe - Delivery Much fullstack Desafio
+# The Recipe
 
-Este projeto foi realizado para o desafio da Delivery Much.  
+Este projeto foi realizado para um desafio.
+Demo: [http://therecipe.thiagotms.tech](http://therecipe.thiagotms.tech) !  
 
 ## Esse projeto usa :sparkles: 
 :heavy_check_mark: Javascript(ES6+)    
@@ -12,16 +13,15 @@ Este projeto foi realizado para o desafio da Delivery Much.
 :heavy_check_mark: Docker   
 :heavy_check_mark: PHPUnit  
 
+## Coisa que podem ser feitas no projeto :clipboard::construction::construction_worker:  
+:heavy_check_mark: CI/CD
+:heavy_check_mark: Documentação da API(Swagger)
+
 ## Outras informações
 
-- Toda aplicação Front ou Back End está inglês
+- Toda aplicação Front/Back-End está inglês
 - A interface visual foi feita apenas com css puro, sem ajuda de frameworks como bootstrap/tailwind.
-- As bibliotecas usada no front-end foi axios, react-icons e react-toastify. Esse último foi para mostrar a mensagem de erro do servidor, tanto validação como falha no acesso a api's externas.
-- No front-end apenas faltou a parte de paginação, porém não deu tempo :pensive:. Possivelmente amanhã farei em uma branch separada caso vocês liberem irei fazer o merge :hugs:.
-- Caso queira acessar o site em execução na minha hospedagem [http://therecipe.thiagotms.tech](http://therecipe.thiagotms.tech)!
-- Não utilizei volumes/bind volumes no docker do projeto. Apesar de deixar um docker-compose quase pronto em termos de desenvolvimento faltando apenas os volumes.
-- Foi configurado e usado typescript para o front-end
-- A aplicação roda na porta 8081
+- As bibliotecas usada no Front-End foi axios, react-icons e react-toastify. Esse último foi para mostrar a mensagem de erro do servidor, tanto validação como falha no acesso a api's externas.
 
 ## Como iniciar o projeto em production
 

@@ -12,7 +12,7 @@ services:
       - .env
     #bind volume
     volumes:
-      - ./back-end/storage:/var/www/storage:rw
+      - ./back-end/storage:/var/www/storage
       - /var/www/vendor
     networks:
       - netapp
@@ -25,9 +25,6 @@ services:
     working_dir: /var/www
     ports:
       - 8000:80
-    expose:
-      - 8000
-    #bind volume
     networks:
       - netapp
   #FRONTEND
@@ -39,15 +36,9 @@ services:
     working_dir: /app
     ports:
       - 8082:3000
-    expose:
-      - 8082
     volumes:
-      - ./front-end:/app:rw
+      - ./front-end:/app
       - /app/node_modules
-    command: > 
-            sh -c "
-            chown -R node:node /app/node_modules 
-            && npm start"
     #bind volume
     networks:
       - netapp

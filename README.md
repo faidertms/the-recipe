@@ -14,8 +14,8 @@ Demo: [http://therecipe.thiagotms.tech](http://therecipe.thiagotms.tech) !
 :heavy_check_mark: PHPUnit  
 
 ## Coisa que podem ser feitas no projeto :clipboard::construction::construction_worker:  
-:heavy_check_mark: CI/CD
-:heavy_check_mark: Documentação da API(Swagger)
+- CI/CD  
+- Documentação da API(Swagger)  
 
 ## Outras informações
 

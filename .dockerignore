@@ -6,3 +6,4 @@
 .dockerignore
 back-end/vendor
 README.md
+back-end/bootstrap/cache/*.php

@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+   #FRONTEND
+   front-end:
+      build:
+         context: .
+         target: frontend
+      restart: unless-stopped
+      working_dir: /app
+      ports:
+         - 8082:3000
+      volumes:
+         - ./front-end:/app
+         - /app/node_modules/
+      networks:
+         - app-network
+   # PHP 7.4 FPM
+   app:
+      volumes:
+         - ./back-end:/var/www/app
+         - /var/www/app/vendor/
+   # NGINX
+   nginx:
+      volumes:
+         - ./back-end:/var/www/app
+         - ./docker/nginx/backend.conf:/etc/nginx/conf.d/backend.conf

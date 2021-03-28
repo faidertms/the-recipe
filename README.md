@@ -89,9 +89,14 @@ O teste deverá ser executado normalmente, mostrando o resultado do teste no ter
 
 Para desenvolvimento recomendo utilizar o docker-compose, no qual já está configurado os volumes para o front-end e o back-end. Qualquer alteração nos arquivos do projeto(na maquina host) será refletido automaticamente no container. Essas configurações estão no arquivo docker-compose.yaml.  
 
+Ambiente de desenvolvimento:  
 ```
-docker-compose up
+docker-compose --env-file .env.development up --build   
+```  
+Ambiente de produção:  
 ```
+docker-compose -f docker-compose.yml -f docker-compose.production.yml up --remove-orphans   
+```  
 Para acessar as aplicações separadamente:  
 Front-end: [http://localhost:8082](http://localhost:8082)  
 Back-end: [http://localhost:8000](http://localhost:8000)
